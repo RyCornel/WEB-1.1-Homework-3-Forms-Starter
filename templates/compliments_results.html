@@ -7,7 +7,10 @@ Compliments Results
 {% block content %}
 
 <!-- Your HTML code goes here! -->
+<h3>Hey {{users_name}}!</h3>
 
+{% if 'wants_compliments' == 'yes' %}
+    <h3>Last time I checked, people described you as {{}}</h3>
 
 
 {% endblock %}

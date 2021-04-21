@@ -55,8 +55,12 @@ def compliments():
 @app.route('/compliments_results')
 def compliments_results():
     """Show the user some compliments."""
+    
+    
     context = {
         # TODO: Enter your context variables here.
+        'users_name' : request.args.get('users_name'),
+        
     }
 
     return render_template('compliments_results.html', **context)
