@@ -9,8 +9,11 @@ Compliments Results
 <!-- Your HTML code goes here! -->
 <h3>Hey {{users_name}}!</h3>
 
-{% if 'wants_compliments' == 'yes' %}
-    <h3>Last time I checked, people described you as {{}}</h3>
+{% if wants_compliments == 'yes' %}
+    <h3>{{users_name}}, I've heard that you are great </h3>
+{% else %}
+    <h3>Sorry {{users_name}}</h3>
 
+{% endif %}
 
 {% endblock %}
