@@ -156,13 +156,13 @@ def image_filter():
         # TODO: Call `apply_filter()` on the file path & filter type
         apply_filter(new_file_path, filter_type)
 
-        image_url = f'./static/images/{image.filename}'
+        image_url = f'/static/images/{image.filename}'
         print(image_url)
 
         context = {
             # TODO: Add context variables here for:
             # - The full list of filter types
-            'filter_types': filter_types,
+            'filter_types': filter_types_dict.keys(),
             # - The image URL
             'img_url': image_url
         }
@@ -173,7 +173,6 @@ def image_filter():
         context = {
             # TODO: Add context variable here for the full list of filter types
             'filter_types' : filter_types_dict.keys(),
-            'img_url' : ""
         }
         return render_template('image_filter.html', **context)
 
