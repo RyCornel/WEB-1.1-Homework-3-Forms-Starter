@@ -59,11 +59,13 @@ def compliments_results():
         random.sample(list_of_compliments, k = int(request.args.get('num_compliments')))
         return compliment
 
+    num_compliments = int(request.args.get('list_of_compliments'))
+    
     context = {
         # TODO: Enter your context variables here.
         'name' : request.args.get('users_name'),
         'want_compliments' : request.args.get('wants_compliments'),
-        'compliments' : list_of_compliments
+        'compliments' : request.args.get('list_of_compliments')
 
     }
 
