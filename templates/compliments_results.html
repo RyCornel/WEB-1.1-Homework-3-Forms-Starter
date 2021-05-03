@@ -10,9 +10,15 @@ Compliments Results
 <h3>Hey {{users_name}}!</h3>
 
 {% if wants_compliments == 'yes' %}
-    <h3>{{users_name}}, I've heard that you are great </h3>
-{% else %}
-    <h3>Sorry {{users_name}}</h3>
+
+<ul>
+    {% for compliment in compliments %}
+    <li>{{compliment}}</li>
+    {% endfor %}
+</ul>
+
+    {% else %}
+    <h3>Sorry {{users_name}}, comeback when you're in the mood for a compliment.</h3>
 
 {% endif %}
 
