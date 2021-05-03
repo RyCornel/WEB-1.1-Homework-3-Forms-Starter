@@ -7,19 +7,16 @@ Compliments Results
 {% block content %}
 
 <!-- Your HTML code goes here! -->
-<h3>Hey {{users_name}}!</h3>
 
 {% if wants_compliments == 'yes' %}
-
+<p>Hey {{name}}! I think you are:</p>
 <ul>
     {% for compliment in compliments %}
     <li>{{compliment}}</li>
     {% endfor %}
 </ul>
-
-    {% else %}
-    <h3>Sorry {{users_name}}, comeback when you're in the mood for a compliment.</h3>
-
+{% else %}
+    <h3>Sorry {{name}}, comeback when you're in the mood for a compliment.</h3>
 {% endif %}
 
 {% endblock %}
