@@ -63,7 +63,7 @@ def compliments_results():
         # TODO: Enter your context variables here.
         'name' : request.args.get('users_name'),
         'want_compliments' : request.args.get('wants_compliments'),
-        'compliments' : compliment_list
+        'compliments' : list_of_compliments
 
     }
 
